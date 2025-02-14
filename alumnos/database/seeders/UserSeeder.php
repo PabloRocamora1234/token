@@ -16,12 +16,11 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        // Crear usuarios de ejemplo
         DB::table('users')->insert([
             'name' => 'John Doe',
             'email' => 'john.doe@example.com',
-            'password' => Hash::make('password123'), // Contraseña encriptada
-            'remember_token' => Str::random(60), // Token de remember me
+            'password' => Hash::make('password123'),
+            'remember_token' => Str::random(60),
         ]);
 
         DB::table('users')->insert([
@@ -30,7 +29,5 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password456'),
             'remember_token' => Str::random(60),
         ]);
-
-        // Agrega más usuarios si es necesario
     }
 }
